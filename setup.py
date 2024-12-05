@@ -9,17 +9,21 @@ try:
   requirements = [line.strip() for line in requirements]
 except FileNotFoundError:
   requirements = []
+  
+# Read README
+with open("README.md", encoding="utf-8") as f:
+    long_description = f.read()
 
 
 # Metadata
 setup(
   name = "UtterUghs",
-  version = 0.1,
+  version = "0.1",
   author = "Nyi Nyi Nyan Lin",
   author_email = "nyinyinyanlin.mm@gmail.com",
   description = "Do you want a package to spit out utter ughs for you? Here you go!",
-  long_description="There's nothing here. Ughs!!!",
-  long_description_content_type='text/markdown',
+    long_description=long_description,
+    long_description_content_type="text/markdown",
   license = "WTFPL",
   packages = find_packages(),
   install_requires = requirements
