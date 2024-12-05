@@ -10,14 +10,22 @@ try:
 except FileNotFoundError:
   requirements = []
 
+try:
+  this_directory = Path(__file__).absolute().parent
+  with open((this_directory / "README.md"), encoding = "utf-8") as f:
+    long_description = f.read()
+except FileNotFoundError:
+  long_description = ""
+
+
 # Metadata
 setup(
-  name = "UtterUghspip ",
+  name = "UtterUghs",
   version = 0.1,
   author = "Nyi Nyi Nyan Lin",
   author_email = "nyinyinyanlin.mm@gmail.com",
   description = "Do you want a package to spit out utter ughs for you? Here you go!",
-  long_description=open('README.md').read(),
+  long_description=long_description,
   long_description_content_type='text/markdown',
   license = "WTFPL",
   packages = find_packages(),

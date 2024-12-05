@@ -1,2 +1,4 @@
 utterughs/__pycache__
 *egg*
+.github/build
+.github/dist
