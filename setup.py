@@ -17,6 +17,8 @@ setup(
   author = "Nyi Nyi Nyan Lin",
   author_email = "nyinyinyanlin.mm@gmail.com",
   description = "Do you want a package to spit out utter ughs for you? Here you go!",
+  long_description=open('README.md').read(),
+  long_description_content_type='text/markdown',
   license = "WTFPL",
   packages = find_packages(),
   install_requires = requirements
