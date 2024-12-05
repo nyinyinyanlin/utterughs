@@ -12,7 +12,7 @@ except FileNotFoundError:
 
 # Metadata
 setup(
-  name = "UtterUghs",
+  name = "UtterUghspip ",
   version = 0.1,
   author = "Nyi Nyi Nyan Lin",
   author_email = "nyinyinyanlin.mm@gmail.com",
