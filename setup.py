@@ -10,9 +10,10 @@ try:
 except FileNotFoundError:
   requirements = []
   
-# Read README
-with open("README.md", encoding="utf-8") as f:
-    long_description = f.read()
+# Read README using Path to ensure correct file location
+this_directory = Path(__file__).parent
+long_description = (this_directory / "README.md").read_text(encoding="utf-8")
+
 
 
 # Metadata
@@ -22,8 +23,8 @@ setup(
   author = "Nyi Nyi Nyan Lin",
   author_email = "nyinyinyanlin.mm@gmail.com",
   description = "Do you want a package to spit out utter ughs for you? Here you go!",
-    long_description=long_description,
-    long_description_content_type="text/markdown",
+  long_description=long_description,
+  long_description_content_type="text/markdown",
   license = "WTFPL",
   packages = find_packages(),
   install_requires = requirements
